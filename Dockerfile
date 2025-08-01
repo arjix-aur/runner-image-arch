@@ -5,4 +5,6 @@ RUN pacman-key --init \
         sudo-rs \
         devtools \
         openssh \
-        git
+        git \
+    && pacman -Scc --noconfirm \
+    && rm -rf /etc/pacman.d/gnupg
