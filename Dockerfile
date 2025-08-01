@@ -4,7 +4,8 @@ RUN pacman-key --init \
     && pacman -Syu --noconfirm \
         sudo-rs \
         devtools \
+        pacman-contrib \
         openssh \
         git \
-    && pacman -Scc --noconfirm \
+    && paccache -rk0 \
     && rm -rf /etc/pacman.d/gnupg
