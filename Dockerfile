@@ -7,5 +7,6 @@ RUN pacman-key --init \
         pacman-contrib \
         openssh \
         git \
+    && pacman -Qtdq | pacman -Rns --noconfirm - \
     && paccache -rk0 \
     && rm -rf /etc/pacman.d/gnupg
