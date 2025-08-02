@@ -36,6 +36,7 @@ packages=(
     curl
     nodejs
     jq
+    tea
 )
 
 pacman -Syu --noconfirm
