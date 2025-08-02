@@ -43,3 +43,16 @@ pacman -S --noconfirm "${packages[@]}"
 
 paccache -rk0
 EOF
+
+ARG USERNAME=archie
+ARG UID=1000
+
+RUN <<EOF
+useradd -m -u $UID -G wheel -s /bin/bash $USERNAME
+echo "$USERNAME:password" | chpasswd
+
+echo "$USERNAME ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/$USERNAME
+EOF
+
+USER $USERNAME
+WORKDIR /home/$USERNAME
