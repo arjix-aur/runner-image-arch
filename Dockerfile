@@ -34,6 +34,8 @@ packages=(
     git
     wget
     curl
+    node
+    jq
 )
 
 pacman -Syu --noconfirm
