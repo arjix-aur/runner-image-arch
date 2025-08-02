@@ -34,7 +34,7 @@ packages=(
     git
     wget
     curl
-    node
+    nodejs
     jq
 )
 
