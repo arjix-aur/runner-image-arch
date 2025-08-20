@@ -17,7 +17,7 @@ packages=(
     curl
     nodejs
     nvm
-    gh
+    github-cli
     tea
     jq
     yq
