@@ -4,6 +4,7 @@ sudo pacman -Sy --noconfirm
 sudo pacman -Su --noconfirm paru
 
 packages=(
+    ccache
     docker
     docker-buildx
     devtools
