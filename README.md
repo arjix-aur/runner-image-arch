@@ -1,6 +1,6 @@
-## Publishing
+## Usage
 
 ```shell
-docker build -t git.arjix.dev/arjix/runner-image-arch-full:main .
-docker push git.arjix.dev/arjix/runner-image-arch-full:main
+docker build -t arjix-aur/runner-image-arch:latest .
+docker run -it runner-image-arch:latest bash
 ```
