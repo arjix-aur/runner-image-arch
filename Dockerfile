@@ -16,3 +16,6 @@ RUN --mount=type=bind,target=/script.sh,source=layers/04_config_nodejs.sh,ro /sc
 RUN --mount=type=bind,target=/script.sh,source=layers/05_config_rust.sh,ro /script.sh "$USERNAME"
 
 RUN --mount=type=bind,target=/script.sh,source=layers/99_pacman.sh,ro /script.sh
+
+USER root
+WORKDIR /
