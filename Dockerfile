@@ -15,6 +15,7 @@ RUN --mount=type=bind,target=/script.sh,source=layers/03_packages.sh,ro /script.
 RUN --mount=type=bind,target=/script.sh,source=layers/04_config_nodejs.sh,ro /script.sh "$USERNAME"
 RUN --mount=type=bind,target=/script.sh,source=layers/05_config_rust.sh,ro /script.sh "$USERNAME"
 
+RUN --mount=type=bind,target=/script.sh,source=layers/98_makepkg.mjs,ro /script.sh
 RUN --mount=type=bind,target=/script.sh,source=layers/99_pacman.sh,ro /script.sh
 
 USER root
