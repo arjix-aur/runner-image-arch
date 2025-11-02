@@ -1,6 +1,8 @@
 #!/bin/bash
 
 pacman-key --init
+pacman-key --populate
+
 pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
 pacman-key --lsign-key 3056513887B78AEB
 
