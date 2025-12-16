@@ -2,7 +2,7 @@
 # shellcheck disable=SC2164
 
 sudo pacman -Syu --noconfirm
-sudo pacman -S git make gcc binutils fakeroot
+sudo pacman -S --noconfirm git make gcc binutils fakeroot
 
 git clone https://github.com/CachyOS/CachyOS-PKGBUILDS pkgbuilds
 pushd pkgbuilds
