@@ -2,7 +2,7 @@
 # shellcheck disable=SC2164
 
 sudo pacman -Syu --noconfirm
-sudo pacman -S --noconfirm git make gcc binutils fakeroot rustup
+sudo pacman -S --noconfirm git make gcc binutils fakeroot rust
 
 git clone https://github.com/CachyOS/CachyOS-PKGBUILDS pkgbuilds
 pushd pkgbuilds
@@ -11,6 +11,7 @@ pushd pkgbuilds
     popd
 popd
 rm -rf pkgbuilds
+paru -Rsn rust --noconfirm
 
 packages=(
     ccache
@@ -34,6 +35,7 @@ packages=(
     zip
     unzip
     python-pipx
+    rustup
 )
 
 paru -S --noconfirm "${packages[@]}"
