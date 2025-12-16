@@ -6,7 +6,9 @@ sudo pacman -S --noconfirm git make gcc binutils fakeroot
 
 git clone https://github.com/CachyOS/CachyOS-PKGBUILDS pkgbuilds
 pushd pkgbuilds
-    makepkg -si --noconfirm
+    pushd paru
+        makepkg -si --noconfirm
+    popd
 popd
 rm -rf pkgbuilds
 
